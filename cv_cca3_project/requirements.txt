@@ -1,0 +1,6 @@
+numpy
+# OpenCV 5.x removed the Haar cascade classifier (needed for Task 3), so stay on 4.x
+opencv-python>=4.8,<5
+matplotlib
+scikit-image
+ultralytics

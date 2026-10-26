@@ -1,0 +1,4 @@
+technique,output,avg_moving_area_pct,avg_time_ms_per_frame,extra
+Frame differencing,binary motion mask,3.693250868055555,0.3177644426210059,needs previous frame only
+GMM background subtraction (MOG2),binary foreground mask,1.4804615162037038,7.728924428940648,first ~15 frames skipped (background learning)
+Lucas-Kanade optical flow,motion vectors at corner points,17.51260719552177,12.163426672729353,"avg tracked points 200, avg displacement 1.02px; value = % of points moving > 1px (not area)"

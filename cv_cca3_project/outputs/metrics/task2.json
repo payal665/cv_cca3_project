@@ -1,0 +1,86 @@
+{
+  "photo1": "Photo1.jpeg",
+  "photo2": "photo2.jpeg",
+  "working_size_photo1_wh": [
+    800,
+    800
+  ],
+  "working_size_photo2_wh": [
+    600,
+    800
+  ],
+  "hog": {
+    "params": {
+      "orientations": 9,
+      "pixels_per_cell": [
+        16,
+        16
+      ],
+      "cells_per_block": [
+        2,
+        2
+      ]
+    },
+    "photo1_vector_length": 8100,
+    "photo2_vector_length": 5940
+  },
+  "sift": {
+    "photo1_keypoints": 542,
+    "photo2_keypoints": 2003,
+    "descriptor_length": 128
+  },
+  "ratio_test": 0.75,
+  "ransac_px": 5.0,
+  "experiments": [
+    {
+      "experiment": "original",
+      "description": "photo1 vs photo2 (no change)",
+      "keypoints_photo1": 542,
+      "keypoints_photo2_variant": 2003,
+      "good_matches": 32,
+      "ransac_inliers": 26,
+      "inlier_ratio_pct": 81.2,
+      "matching_time_ms": 12.9
+    },
+    {
+      "experiment": "rotated_45",
+      "description": "photo2 rotated by 45 degrees",
+      "keypoints_photo1": 542,
+      "keypoints_photo2_variant": 2438,
+      "good_matches": 37,
+      "ransac_inliers": 32,
+      "inlier_ratio_pct": 86.5,
+      "matching_time_ms": 7.1
+    },
+    {
+      "experiment": "rotated_90",
+      "description": "photo2 rotated by 90 degrees",
+      "keypoints_photo1": 542,
+      "keypoints_photo2_variant": 2007,
+      "good_matches": 28,
+      "ransac_inliers": 23,
+      "inlier_ratio_pct": 82.1,
+      "matching_time_ms": 6.3
+    },
+    {
+      "experiment": "resized_50pct",
+      "description": "photo2 resized to 50 %",
+      "keypoints_photo1": 542,
+      "keypoints_photo2_variant": 624,
+      "good_matches": 39,
+      "ransac_inliers": 16,
+      "inlier_ratio_pct": 41.0,
+      "matching_time_ms": 9.3
+    },
+    {
+      "experiment": "resized_25pct",
+      "description": "photo2 resized to 25 %",
+      "keypoints_photo1": 542,
+      "keypoints_photo2_variant": 167,
+      "good_matches": 47,
+      "ransac_inliers": 15,
+      "inlier_ratio_pct": 31.9,
+      "matching_time_ms": 22.1
+    }
+  ]
+}

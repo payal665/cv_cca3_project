@@ -1,0 +1,80 @@
+{
+  "input_file": "Photo1.jpeg",
+  "working_size_wh": [
+    1000,
+    1000
+  ],
+  "noise": {
+    "gaussian_sigma": 25,
+    "salt_pepper_amount": 0.05,
+    "seed": 42
+  },
+  "restoration_table": [
+    {
+      "noise": "gaussian_noise",
+      "method": "none (noisy image)",
+      "psnr": 20.35275097228269,
+      "ssim": 0.15553265490115153
+    },
+    {
+      "noise": "gaussian_noise",
+      "method": "median filter 5x5",
+      "psnr": 31.00688383422802,
+      "ssim": 0.6932341759301637
+    },
+    {
+      "noise": "gaussian_noise",
+      "method": "gaussian filter 5x5",
+      "psnr": 30.54858444891543,
+      "ssim": 0.641373336352455
+    },
+    {
+      "noise": "salt_pepper_noise",
+      "method": "none (noisy image)",
+      "psnr": 18.28957628585153,
+      "ssim": 0.22368954976184977
+    },
+    {
+      "noise": "salt_pepper_noise",
+      "method": "median filter 5x5",
+      "psnr": 38.19604803148148,
+      "ssim": 0.9533561346566075
+    },
+    {
+      "noise": "salt_pepper_noise",
+      "method": "gaussian filter 5x5",
+      "psnr": 28.38655076612005,
+      "ssim": 0.5811543989447148
+    }
+  ],
+  "best_filter": {
+    "gaussian_noise": {
+      "best_by_psnr": "median filter 5x5",
+      "best_by_ssim": "median filter 5x5"
+    },
+    "salt_pepper_noise": {
+      "best_by_psnr": "median filter 5x5",
+      "best_by_ssim": "median filter 5x5"
+    }
+  },
+  "morphology": {
+    "otsu_threshold": 84.0,
+    "binary_was_inverted": true,
+    "otsu_white_pct": 35.6848,
+    "erosion_white_pct": 33.5144,
+    "dilation_white_pct": 37.805,
+    "opening_white_pct": 35.4309,
+    "closing_white_pct": 36.0136,
+    "canny_auto_thresholds": [
+      69,
+      139
+    ],
+    "canny_auto_edge_pct": 1.0504,
+    "canny_fixed_edge_pct": 0.5169,
+    "kernel": "5x5 ellipse"
+  },
+  "watershed": {
+    "image_used": "Photo1.jpeg",
+    "num_regions_found": 2
+  }
+}

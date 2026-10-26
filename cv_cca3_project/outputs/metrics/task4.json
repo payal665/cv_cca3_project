@@ -1,0 +1,53 @@
+{
+  "video": {
+    "file": "video.mp4",
+    "width": 768,
+    "height": 576,
+    "fps": 10.0,
+    "frames": 60,
+    "duration_s": 6.0
+  },
+  "processed_width": 640,
+  "warmup_frames_skipped": 15,
+  "thresholds": {
+    "frame_diff": 25,
+    "lk_moving_px": 1.0
+  },
+  "summary": [
+    {
+      "technique": "Frame differencing",
+      "output": "binary motion mask",
+      "avg_moving_area_pct": 3.693250868055555,
+      "avg_time_ms_per_frame": 0.3177644426210059,
+      "extra": "needs previous frame only"
+    },
+    {
+      "technique": "GMM background subtraction (MOG2)",
+      "output": "binary foreground mask",
+      "avg_moving_area_pct": 1.4804615162037038,
+      "avg_time_ms_per_frame": 7.728924428940648,
+      "extra": "first ~15 frames skipped (background learning)"
+    },
+    {
+      "technique": "Lucas-Kanade optical flow",
+      "output": "motion vectors at corner points",
+      "avg_moving_area_pct": 17.51260719552177,
+      "avg_time_ms_per_frame": 12.163426672729353,
+      "extra": "avg tracked points 200, avg displacement 1.02px; value = % of points moving > 1px (not area)"
+    }
+  ],
+  "avg_iou_framediff_vs_gmm": 0.36169616877713345,
+  "sample_frames": [
+    15,
+    30,
+    45
+  ],
+  "consecutive_frames_saved": [
+    30,
+    31,
+    32,
+    33,
+    34,
+    35
+  ]
+}

@@ -1,0 +1,7 @@
+noise,method,psnr,ssim
+gaussian_noise,none (noisy image),20.35275097228269,0.15553265490115153
+gaussian_noise,median filter 5x5,31.00688383422802,0.6932341759301637
+gaussian_noise,gaussian filter 5x5,30.54858444891543,0.641373336352455
+salt_pepper_noise,none (noisy image),18.28957628585153,0.22368954976184977
+salt_pepper_noise,median filter 5x5,38.19604803148148,0.9533561346566075
+salt_pepper_noise,gaussian filter 5x5,28.38655076612005,0.5811543989447148

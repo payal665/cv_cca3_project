@@ -1,0 +1,103 @@
+{
+  "haar_file": "haarcascade_frontalface_default.xml",
+  "yolo_weights": "yolov8n.pt",
+  "yolo_available": true,
+  "yolo_conf_threshold": 0.25,
+  "rows": [
+    {
+      "source": "photo1",
+      "haar_faces": 3,
+      "haar_ms": 554.5,
+      "haar_scores": [
+        3.78,
+        10.47,
+        0.83
+      ],
+      "yolo_objects": 1,
+      "yolo_persons": 1,
+      "yolo_classes": {
+        "person": 1
+      },
+      "yolo_avg_conf": 0.864,
+      "yolo_ms": 3683.3,
+      "possible_issues": []
+    },
+    {
+      "source": "photo2",
+      "haar_faces": 1,
+      "haar_ms": 119.5,
+      "haar_scores": [
+        11.05
+      ],
+      "yolo_objects": 2,
+      "yolo_persons": 1,
+      "yolo_classes": {
+        "person": 1,
+        "tie": 1
+      },
+      "yolo_avg_conf": 0.676,
+      "yolo_ms": 108.3,
+      "possible_issues": [
+        "1 YOLO detection(s) have confidence < 0.50 (check if they are wrong): tie 0.45"
+      ]
+    },
+    {
+      "source": "video_frame_12",
+      "haar_faces": 0,
+      "haar_ms": 123.2,
+      "haar_scores": [],
+      "yolo_objects": 9,
+      "yolo_persons": 6,
+      "yolo_classes": {
+        "person": 6,
+        "car": 1,
+        "truck": 1,
+        "bird": 1
+      },
+      "yolo_avg_conf": 0.708,
+      "yolo_ms": 97.5,
+      "possible_issues": [
+        "YOLO sees a person but Haar found no face (Haar may have missed it, or the face is small/turned away).",
+        "1 YOLO detection(s) have confidence < 0.50 (check if they are wrong): bird 0.37"
+      ]
+    },
+    {
+      "source": "video_frame_30",
+      "haar_faces": 0,
+      "haar_ms": 141.0,
+      "haar_scores": [],
+      "yolo_objects": 8,
+      "yolo_persons": 6,
+      "yolo_classes": {
+        "person": 6,
+        "car": 1,
+        "truck": 1
+      },
+      "yolo_avg_conf": 0.723,
+      "yolo_ms": 77.6,
+      "possible_issues": [
+        "YOLO sees a person but Haar found no face (Haar may have missed it, or the face is small/turned away)."
+      ]
+    },
+    {
+      "source": "video_frame_48",
+      "haar_faces": 0,
+      "haar_ms": 145.7,
+      "haar_scores": [],
+      "yolo_objects": 11,
+      "yolo_persons": 9,
+      "yolo_classes": {
+        "person": 9,
+        "car": 1,
+        "truck": 1
+      },
+      "yolo_avg_conf": 0.662,
+      "yolo_ms": 67.5,
+      "possible_issues": [
+        "YOLO sees a person but Haar found no face (Haar may have missed it, or the face is small/turned away).",
+        "2 YOLO detection(s) have confidence < 0.50 (check if they are wrong): person 0.39, person 0.28"
+      ]
+    }
+  ],
+  "note": "possible_issues are automatic hints, not ground truth. Verify visually and write your own observation about missed / incorrect detections in the report."
+}

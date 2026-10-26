@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Big files: videos go to Google Drive, not Git (assignment instruction)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.m4v
+
+# Model weights are downloaded automatically by Ultralytics
+*.pt
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
